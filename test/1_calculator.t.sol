@@ -18,11 +18,19 @@ contract CalculatorTest is Test, FheEnabled {
         calculator = new Calculator();
     }
 
-    function testSimpleAdd() public {
-        inEuint8 memory a = encrypt8(1);
-        inEuint8 memory b = encrypt8(3);
+    function testSimpleAdd() public view {
+        inEuint8 memory a = encrypt8(10);
+        inEuint8 memory b = encrypt8(27);
 
         euint8 result = calculator.add(a, b);
-        assertEq(FHE.decrypt(result), 4);
+        assertEq(FHE.decrypt(result), 37);
     }
+
+    function testMultiAdd() public view {
+        inEuint8 memory a = encrypt8(95);
+        inEuint8 memory b = encrypt8(16);
+
+        euint8 result = calculator.add(a, b);
+        assertEq(FHE.decrypt(result), 111);
+    } 
 }
