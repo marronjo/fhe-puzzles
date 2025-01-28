@@ -15,27 +15,27 @@ import { Test } from "forge-std/src/Test.sol";
 
 contract FheAssert is Test {
 
-    function assertEq256(euint256 a, euint256 b) public pure {
+    function encryptedEq256(euint256 a, euint256 b) public pure {
         FHE.req(FHE.eq(a, b));
     }
 
-    function assertEq128(euint128 a, euint128 b) public pure {
+    function encryptedEq128(euint128 a, euint128 b) public pure {
         FHE.req(FHE.eq(a, b));
     }
 
-    function assertEq64(euint64 a, euint64 b) public pure {
+    function encryptedEq64(euint64 a, euint64 b) public pure {
         FHE.req(FHE.eq(a, b));
     }
 
-    function assertEq32(euint32 a, euint32 b) public pure {
+    function encryptedEq32(euint32 a, euint32 b) public pure {
         FHE.req(FHE.eq(a, b));
     }
 
-    function assertEq16(euint16 a, euint16 b) public pure {
+    function encryptedEq16(euint16 a, euint16 b) public pure {
         FHE.req(FHE.eq(a, b));
     }
 
-    function assertEq8(euint8 a, euint8 b) public pure {
+    function encryptedEq8(euint8 a, euint8 b) public pure {
         FHE.req(FHE.eq(a, b));
     }
 }

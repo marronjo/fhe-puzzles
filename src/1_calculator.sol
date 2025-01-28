@@ -7,11 +7,11 @@ contract Calculator {
     /**
      * Implement this method to make the tests pass
      * Add the euints a and b together and return the result
+     * Ignore overflow, since FHE add wraps overflowing values
      *
      * Hint : you need to change the inEuints into euints before adding
      */
     function add(inEuint8 calldata a, inEuint8 calldata b) public pure returns (euint8) {
         // write your code here
-        return FHE.asEuint8(a) + FHE.asEuint8(b);
     }
 }
